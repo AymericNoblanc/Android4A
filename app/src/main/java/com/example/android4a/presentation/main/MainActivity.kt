@@ -1,8 +1,8 @@
-package com.example.android4a
+package com.example.android4a.presentation.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.Observer
+import com.example.android4a.R
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.inject
 
@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
             mainViewModel.onClickedIncrement()
         }
 
-        mainViewModel.counter.observe(this, Observer {
+        mainViewModel.counter.observe(this, {
             main_text.text = it.toString()
         })
 
