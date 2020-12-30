@@ -33,19 +33,19 @@
                 tools:context=".presentation.main.MainActivity">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/lastname_input_layout"
+                android:id="@+id/latitude_input_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nom"
+                android:hint="Latitude"
                 android:layout_marginTop="@dimen/form"
                 app:layout_constraintVertical_chainStyle="packed"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/firstname_input_layout">
+                app:layout_constraintBottom_toTopOf="@+id/longitude_input_layout">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/lastname_edit"
+                    android:id="@+id/latitude_edit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
@@ -54,19 +54,19 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/firstname_input_layout"
+                android:id="@+id/longitude_input_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Prénom"
+                android:hint="Longitude"
                 android:layout_marginTop="@dimen/form"
                 app:layout_constraintVertical_chainStyle="packed"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lastname_input_layout"
+                app:layout_constraintTop_toBottomOf="@+id/latitude_input_layout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toTopOf="@+id/email_input_layout">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/firstname_edit"
+                    android:id="@+id/longitude_edit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
@@ -82,7 +82,7 @@
                 android:layout_marginTop="@dimen/form"
                 app:layout_constraintVertical_chainStyle="packed"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/firstname_input_layout"
+                app:layout_constraintTop_toBottomOf="@+id/longitude_input_layout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toTopOf="@+id/password_input_layout">
 

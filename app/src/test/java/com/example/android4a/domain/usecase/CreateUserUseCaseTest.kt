@@ -18,7 +18,7 @@ class CreateUserUseCaseTest {
     fun invoke(){
         runBlocking {
             //GIVEN
-            val user = User("", password, nom, prenom)
+            val user = User("", "", "", "")
             coEvery { userRepository.createUser(user) } returns Unit
 
             //WHEN

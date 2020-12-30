@@ -1,6 +1,5 @@
-package com.example.android4a.presentation.main
+package com.example.android4a.presentation.createAccount
 
-import android.content.DialogInterface
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,17 +8,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.FragmentManager
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import com.example.android4a.R
-import com.example.android4a.data.repository.UserRepository
 import com.example.android4a.domain.entity.User
-import com.example.android4a.domain.usecase.CreateUserUseCase
 import com.google.android.material.textfield.TextInputEditText
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import org.koin.android.ext.android.inject
 
 
@@ -37,9 +28,9 @@ internal class CreateAccount(Email: String, Password: String) : DialogFragment()
     private lateinit var password_edit: TextInputEditText
     private var password: String? = Password
 
-    private lateinit var lastname_edit: TextInputEditText
+    private lateinit var latitude_edit: TextInputEditText
 
-    private lateinit var firstname_edit: TextInputEditText
+    private lateinit var longitude_edit: TextInputEditText
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -75,8 +66,8 @@ internal class CreateAccount(Email: String, Password: String) : DialogFragment()
             password_edit.setText(password)
         }
 
-        lastname_edit = view.findViewById(R.id.lastname_edit)
-        firstname_edit = view.findViewById(R.id.firstname_edit)
+        latitude_edit = view.findViewById(R.id.latitude_edit)
+        longitude_edit = view.findViewById(R.id.longitude_edit)
 
         return view
     }
@@ -87,7 +78,7 @@ internal class CreateAccount(Email: String, Password: String) : DialogFragment()
         toolbar!!.title = "Création de compte"
         toolbar!!.setTitleTextColor(Color.WHITE)
         button?.setOnClickListener {
-            val user = User(email_edit.text.toString().trim(), password_edit.text.toString().trim(), lastname_edit.text.toString().trim(), firstname_edit.text.toString().trim())
+            val user = User(email_edit.text.toString().trim(), password_edit.text.toString().trim(), latitude_edit.text.toString().trim(), longitude_edit.text.toString().trim())
             createAccountViewModel.onClicked(user)
             dismiss()
         }
