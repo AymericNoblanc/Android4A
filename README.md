@@ -42,7 +42,7 @@ Elle a été développée avec l'utilisation du [pattern MVVM](https://fr.wikipe
 
 ## Fonctionnalités :
 
-#### Ecran de connexion
+### Ecran de connexion
 
 C'est ici que **l'utilisateur** va arriver au **lancement** de l'application
 
@@ -56,7 +56,7 @@ Lors de la **connexion**, si le compte n'a **pas** encore été **créé** ou qu
 
 <img src="READMEImage/ErreurLogin.png" width=250>
 
-#### Ecran de création de compte
+### Ecran de création de compte
 
 Quand l'utilisateur appuye sur le bouton create account, il **arrive ici**
 
@@ -66,7 +66,7 @@ Les champs **latitude** et **longitude** permettent de repéré **où ce trouve 
 
 <img src="READMEImage/CreateAccount.png" width=250>
 
-#### Ecran d'affichage de la liste
+### Ecran d'affichage de la liste
 
 **Affichage** de la **liste des pages** retourné par l'API Wikipédia
 
